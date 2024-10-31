@@ -1,0 +1,292 @@
+/*
+#121113
+#131217 - theme
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+@font-face {
+    font-family: title;
+    src:url("../../public/REDENSEK.TTF");
+}
+
+html {
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+a, p {
+    text-decoration: none;
+}
+
+
+body {
+    background-color: #121113;
+    font-family: 'Instrument Sans';
+    height: 100vh;
+}
+
+nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    transition: all 0.15s ease-in-out;
+    z-index: 30;
+    position: fixed;
+    top: 0;
+    opacity: 90%;
+    background-color: #121113;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+    align-items: center;
+    max-width: 1100px;
+    position: relative;
+}
+
+.nav ul {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+}
+
+.nav ul:first-child a {
+    display: flex;
+    align-items: center;
+}
+
+.nav-link img {
+    height: 25px;
+    margin-right: 20px;
+}
+
+.nav li {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    text-decoration: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.35s ease-in-out;
+    color: rgba(255, 255, 255, 0.486);
+}
+
+@media screen and (max-width: 1200px) {
+    .nav ul li:not(:first-child),
+    .nav a {
+        display: none;
+    }
+}
+
+.hp1 {
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    width: 100%;
+    color: white;
+    z-index: 100;
+   
+}
+
+.hp1-area {
+    display: flex;
+    align-items: center;
+    width: 70%;
+    max-width: 950px;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+}
+
+.hp1-title {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.hp1-desc {
+    font-size: 20px;
+    color: #e2e8ffbf;
+}
+
+
+.hp1-get-started {
+    background: linear-gradient(135deg,color(display-p3 .6196078431 .4784313725 1/1) 0%,color(display-p3 .9960784314 .5450980392 .7333333333/1) 33.33%,color(display-p3 1 .7411764706 .4784313725/1) 66.67%,color(display-p3 .9725490196 .9176470588 .7647058824/1) 100%);
+    border-radius: 10px;
+    padding: 15px 25px;
+    color: white;
+    margin-top: 20px;
+}
+
+.animated-border-box,
+.animated-border-box-glow {
+    max-height: 800px;
+    max-width: 800px; 
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    overflow: hidden;
+    z-index: -20;
+    border-radius: 400px;
+
+    margin-top: 850px;
+}
+
+.animated-border-box-glow {
+    overflow: hidden;
+    filter: blur(20px);
+}
+
+.animated-border-box:before,
+.animated-border-box-glow:before {
+    content: '';
+    z-index: -2;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    position: absolute;
+    width: 99999px;
+    height: 99999px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-image: conic-gradient(rgba(0, 0, 0, 0), color(display-p3 .6196078431 .4784313725 1 / 1), rgba(0, 0, 0, 0) 35%);
+    animation: rotate 30s linear infinite;
+}
+
+.animated-border-box:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: -4px;
+    top: -4px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    background: #121113;
+    border-radius: 400px;
+}
+
+.black {
+    position: absolute;
+    width: 60%;
+    height: 600px;
+    background-color: #121113;
+    z-index: 5;
+    top: 500px;
+}
+
+@keyframes rotate {
+    100% {
+        transform: translate(-50%, -50%) rotate(1turn);
+    }
+}
+
+.gradient {
+    background-image: linear-gradient(135deg, color(display-p3 .6196078431 .4784313725 1 / 1) 0%, color(display-p3 .9960784314 .5450980392 .7333333333 / 1) 33.33%, color(display-p3 1 .7411764706 .4784313725 / 1) 66.67%, color(display-p3 .9725490196 .9176470588 .7647058824 / 1) 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.background-dots {
+    background-image: url(/public/q-0e379a5f.png);
+    width: 500px; /* Set the width you need */
+    height: 500px; /* Set the height you need */
+    mask-image: url(/public/q-cc423fbc.png); /* The image used as a mask */
+
+    mask-size: cover; /* Adjusts the mask to fit */
+    background-size: cover; /* Adjusts the main image to fit */
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+
+.background-dots-fill div {
+    transform: translateY(306px);
+    animation: hero-background-dot 10s cubic-bezier(.6,.6,0,1) infinite;
+    width: 258px;
+    height: 400px;
+    background-image: linear-gradient(135deg, #9e7aff 0%, #fe8bbb 33.33%, #ffbd7a 66.67%, #f8eac3 100%);
+    background-image: linear-gradient(135deg, color(display-p3 .6196078431 .4784313725 1 / 1) 0%, color(display-p3 .9960784314 .5450980392 .7333333333 / 1) 33.33%, color(display-p3 1 .7411764706 .4784313725 / 1) 66.67%, color(display-p3 .9725490196 .9176470588 .7647058824 / 1) 100%);
+}
+
+@keyframes hero-background-dot {
+    0%, 90.001%, 100% {
+        transform: translateZ(0) translateY(306px);
+    }
+    90% {
+        transform: translateZ(0) translateY(-400px);
+    }
+}
+
+.hp2 {
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    width: 100%;
+    color: white;
+    z-index: 100;
+   
+}
+
+.hp2-area {
+    display: flex;
+    width: 70%;
+    max-width: 950px;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.hp2-title {
+    font-weight: 600;
+    font-size: 45px;
+    text-align: left;
+}
+
+.hp2-desc {
+    font-size: 20px;
+    color: #e2e8ffbf;
+}
+
+.hero-background-dots-2 {
+    transform: rotate(-180deg);
+}
+
+.button {
+    background-color: inherit;
+    border: none;
+    transition: all 0.2s ease-in-out;
+    color: inherit;
+    font-weight: 600;
+    transform: translateY(0);
+    box-shadow: 0 7px 0px inherit;
+    width: fit-content;
+    height: fit-content;
+    user-select: none;
+}
+
+/*rgb(228, 228, 228)*/
+
+.button:active {
+    transform: translateY(5px);
+    box-shadow: 0 2px 0px inherit;
+}
