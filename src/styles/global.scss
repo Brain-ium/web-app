@@ -1,0 +1,32 @@
+/*
+#121113
+#131217 - theme
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
+@font-face {
+    font-family: title;
+    src:url("../../public/REDENSEK.TTF");
+}
+
+html {
+    overflow-x: hidden;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+a, p {
+    text-decoration: none;
+}
+
+
+body {
+    background-color: #121113;
+    font-family: 'Instrument Sans';
+    height: 100vh;
+}
